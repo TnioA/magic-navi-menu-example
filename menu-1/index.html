@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Magic Navigation Menu | 1</title>
+</head>
+<body>
+    <div class="navigation">
+        <ul>
+            <li class="list active">
+                <a href="#">
+                    <span class="icon">
+                        <i class="material-symbols-outlined">home</i>
+                    </span>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon">
+                        <i class="material-symbols-outlined">person</i>
+                    </span>
+                    <span class="text">Profile</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon">
+                        <i class="material-symbols-outlined">chat_bubble</i>
+                    </span>
+                    <span class="text">Message</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon">
+                        <i class="material-symbols-outlined">photo_camera</i>
+                    </span>
+                    <span class="text">Photos</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon">
+                        <i class="material-symbols-outlined">settings</i>
+                    </span>
+                    <span class="text">Settings</span>
+                </a>
+            </li>
+            <div class="indicator"></div>
+        </ul>
+    </div>
+
+    <script>
+        console.log("Magic Navigation Menu Script");
+
+        const list = document.querySelectorAll(".list");
+
+        function activeLink(item) {
+            list.forEach(x=> x.classList.remove("active"));
+            this.classList.add("active");
+        }
+
+        list.forEach((item) => {
+            item.addEventListener("click", activeLink);
+        });
+    </script>
+</body>
+</html>
